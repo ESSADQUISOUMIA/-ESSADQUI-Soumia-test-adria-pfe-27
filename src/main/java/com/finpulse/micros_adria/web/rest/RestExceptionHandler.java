@@ -1,0 +1,4 @@
+package com.finpulse.micros_adria.web.rest;
+
+public class RestExceptionHandler {
+}
