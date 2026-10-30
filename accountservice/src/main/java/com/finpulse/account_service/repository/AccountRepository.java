@@ -1,4 +1,4 @@
-package com.finpulse.account_service.dto.repository;
+package com.finpulse.account_service.repository;
 
 
 import com.finpulse.micros_adria.accountservice.domain.Account;

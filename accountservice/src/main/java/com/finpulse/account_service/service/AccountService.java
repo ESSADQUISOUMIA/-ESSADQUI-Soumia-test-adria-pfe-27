@@ -1,6 +1,5 @@
 package com.finpulse.account_service.service;
 
-package ma.adria.accountservice.service;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;

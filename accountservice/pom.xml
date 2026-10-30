@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.finpulse</groupId>
-    <artifactId>account_service</artifactId>
+    <artifactId>accountservice</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>account_service</name>
     <description>account_service</description>
