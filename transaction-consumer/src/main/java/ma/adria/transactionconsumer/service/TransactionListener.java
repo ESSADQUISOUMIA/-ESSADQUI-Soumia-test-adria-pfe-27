@@ -1,0 +1,3 @@
+package ma.adria.transactionconsumer.service;
+import org.springframework.stereotype.Component;import org.springframework.kafka.annotation.KafkaListener;import org.slf4j.*;import com.fasterxml.jackson.databind.ObjectMapper;
+@Component public class TransactionListener {private static final Logger log=LoggerFactory.getLogger(TransactionListener.class);private final ObjectMapper json;public TransactionListener(ObjectMapper json){this.json=json;}@KafkaListener(topics="bank.transactions.created") public void receive(String event) throws Exception {var node=json.readTree(event);log.info("Événement reçu eventId={} transactionId={} type={}",node.path("eventId").asText(),node.path("transactionId").asText(),node.path("eventType").asText());}}
