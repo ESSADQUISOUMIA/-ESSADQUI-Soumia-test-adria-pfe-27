@@ -70,4 +70,15 @@ public class Account {
     public void changeStatus(AccountStatus status) {
         this.status = status;
     }
+    public void debit(BigDecimal amount) {
+        this.balance = BigDecimal.valueOf(this.balance)
+                .subtract(amount)
+                .doubleValue();
+    }
+
+    public void credit(BigDecimal amount) {
+        this.balance = BigDecimal.valueOf(this.balance)
+                .add(amount)
+                .doubleValue();
+    }
 }

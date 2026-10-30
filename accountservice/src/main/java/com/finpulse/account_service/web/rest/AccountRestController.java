@@ -3,10 +3,10 @@ package com.finpulse.account_service.web.rest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
-import com.finpulse.micros_adria.accountservice.domain.AccountStatus;
-import com.finpulse.micros_adria.accountservice.service.AccountService;
-import com.finpulse.micros_adria.accountservice.service.dto.AccountResponse;
-import com.finpulse.micros_adria.accountservice.service.dto.CreateAccountRequest;
+import com.finpulse.accountservice.domain.AccountStatus;
+import com.finpulse.accountservice.service.AccountService;
+import com.finpulse.accountservice.service.dto.AccountResponse;
+import com.finpulse.accountservice.service.dto.CreateAccountRequest;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
