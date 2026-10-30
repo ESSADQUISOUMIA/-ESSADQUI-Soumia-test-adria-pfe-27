@@ -1,4 +1,4 @@
-# FinPulse — Plateforme bancaire à microservices (Projet ADRIA)
+# Plateforme bancaire à microservices (Projet ADRIA)
 
 Projet réalisé pour le **Test ADRIA ENSET 2027** — ENSET Mohammedia, 3e année cycle ingénieur.
 Auteure : Soumia ESSADQUI · Encadrant : P. ELYOUSSEFI
