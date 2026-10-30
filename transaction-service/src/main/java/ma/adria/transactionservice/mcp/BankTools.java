@@ -1,0 +1,5 @@
+package ma.adria.transactionservice.mcp;
+import org.springframework.stereotype.Component;import org.springframework.ai.tool.annotation.Tool;import ma.adria.transactionservice.service.TransactionService;import java.util.UUID;
+@Component public class BankTools {private final TransactionService s;public BankTools(TransactionService s){this.s=s;}@Tool(description="Lister les transactions") public Object transactions(){return s.list();}
+@Tool(description="Consulter une transaction") public Object transaction(String id){return s.get(UUID.fromString(id));}
+@Tool(description="Effectuer un débit ou virement confirmé par l'utilisateur. Réutiliser id lors des nouvelles tentatives.") public Object createTransaction(String id,String accountId,String destinationAccountId,String amount,String currency,String merchantCategory,String country){return s.create(new TransactionService.Request(UUID.fromString(id),UUID.fromString(accountId),destinationAccountId==null||destinationAccountId.isBlank()?null:UUID.fromString(destinationAccountId),new java.math.BigDecimal(amount),currency,merchantCategory,country));}}

@@ -1,0 +1,3 @@
+package ma.adria.transactionservice.web.rest;
+import org.springframework.web.bind.annotation.*;import ma.adria.transactionservice.service.TransactionService;import ma.adria.transactionservice.domain.BankTransaction;import java.util.*;
+@RestController @RequestMapping("/api/transactions") public class TransactionController {private final TransactionService s;public TransactionController(TransactionService s){this.s=s;}@GetMapping public List<BankTransaction> list(){return s.list();}@GetMapping("/{id}") public BankTransaction get(@PathVariable UUID id){return s.get(id);}@PostMapping public BankTransaction create(@RequestBody TransactionService.Request q){return s.create(q);}}
